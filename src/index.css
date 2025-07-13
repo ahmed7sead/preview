@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font - Academic Typography */
+
+@layer base {
+  :root {
+    /* Academic Color System - High Contrast */
+    --background: 255 255 255;
+    /* Pure white for maximum contrast */
+    --foreground: 15 23 42;
+    /* Dark slate for readability */
+
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+
+    --primary: 15 23 42;
+    /* Dark for primary actions */
+    --primary-foreground: 255 255 255;
+
+    --secondary: 241 245 249;
+    /* Light gray for secondary elements */
+    --secondary-foreground: 15 23 42;
+
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
+
+    --accent: 59 130 246;
+    /* Blue for highlights */
+    --accent-foreground: 255 255 255;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 59 130 246;
+
+    --radius: 0.75rem;
+    /* Consistent border radius */
+
+    /* Sidebar tokens */
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 15 23 42;
+    --sidebar-primary: 15 23 42;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 241 245 249;
+    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 59 130 246;
+  }
+
+  .dark {
+    /* Dark mode with proper contrast ratios */
+    --background: 15 23 42;
+    --foreground: 248 250 252;
+
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
+
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
+
+    --primary: 248 250 252;
+    --primary-foreground: 15 23 42;
+
+    --secondary: 51 65 85;
+    --secondary-foreground: 248 250 252;
+
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+
+    --accent: 59 130 246;
+    --accent-foreground: 255 255 255;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 59 130 246;
+
+    --sidebar-background: 15 23 42;
+    --sidebar-foreground: 248 250 252;
+    --sidebar-primary: 248 250 252;
+    --sidebar-primary-foreground: 15 23 42;
+    --sidebar-accent: 51 65 85;
+    --sidebar-accent-foreground: 248 250 252;
+    --sidebar-border: 51 65 85;
+    --sidebar-ring: 59 130 246;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Mobile-First Base Styles */
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+    font-size: 16px;
+    /* Base 16px for accessibility */
+  }
+
+  /* Academic Typography Hierarchy - Mobile First */
+  h1 {
+    @apply text-2xl font-bold text-foreground leading-tight tracking-tight;
+    @apply md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  h2 {
+    @apply text-xl font-semibold text-foreground leading-tight tracking-tight;
+    @apply md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  h3 {
+    @apply text-lg font-semibold text-foreground leading-tight;
+    @apply md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  h4 {
+    @apply text-base font-medium text-foreground leading-tight;
+    @apply md:text-xl lg:text-2xl xl:text-3xl;
+  }
+
+  h5 {
+    @apply text-sm font-medium text-foreground leading-tight;
+    @apply md:text-lg lg:text-xl xl:text-2xl;
+  }
+
+  h6 {
+    @apply text-sm font-medium text-foreground leading-tight;
+    @apply md:text-base lg:text-lg xl:text-xl;
+  }
+
+  p {
+    @apply text-sm text-muted-foreground leading-relaxed;
+    @apply md:text-base lg:text-lg;
+  }
+
+  .text-small {
+    @apply text-xs leading-relaxed;
+    @apply md:text-sm lg:text-base;
+  }
+
+  .text-caption {
+    @apply text-xs text-muted-foreground leading-relaxed;
+  }
+
+  /* Academic Spacing System - Mobile First */
+  .section-spacing {
+    @apply py-12;
+    @apply md:py-16 lg:py-20 xl:py-24;
+  }
+
+  .container-academic {
+    @apply w-full max-w-7xl mx-auto px-4;
+    @apply sm:px-6 lg:px-8;
+  }
+
+  /* Content Block Spacing - Proximity Principle */
+  .content-block {
+    @apply mb-8;
+    @apply md:mb-12 lg:mb-16;
+  }
+
+  .content-group {
+    @apply space-y-4;
+    @apply md:space-y-6 lg:space-y-8;
+  }
+
+  /* Academic Button System - Consistent & Functional */
+  .btn-primary-academic {
+    @apply bg-foreground text-background font-semibold;
+    @apply px-4 py-3 text-sm rounded-lg;
+    @apply md:px-6 md:py-4 md:text-base lg:px-8 lg:text-lg;
+    @apply transition-all duration-200 hover:opacity-90;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-foreground;
+  }
+
+  .btn-secondary-academic {
+    @apply bg-secondary text-secondary-foreground font-semibold;
+    @apply px-4 py-3 text-sm rounded-lg;
+    @apply md:px-6 md:py-4 md:text-base lg:px-8 lg:text-lg;
+    @apply transition-all duration-200 hover:bg-secondary/80;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary;
+  }
+
+  .btn-outline-academic {
+    @apply bg-transparent border-2 border-foreground text-foreground font-semibold;
+    @apply px-4 py-3 text-sm rounded-lg;
+    @apply md:px-6 md:py-4 md:text-base lg:px-8 lg:text-lg;
+    @apply transition-all duration-200 hover:bg-foreground hover:text-background;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-foreground;
+  }
+
+  /* Academic Card System - Consistent Repetition */
+  .card-academic {
+    @apply bg-card border border-border rounded-xl shadow-sm;
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+    @apply p-4 md:p-6 lg:p-8;
+  }
+
+  .card-academic-dark {
+    @apply bg-foreground text-background border border-foreground/20 rounded-xl shadow-lg;
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply p-4 md:p-6 lg:p-8;
+  }
+
+  /* Form Elements - Accessibility First */
+  input,
+  textarea,
+  select {
+    @apply text-base;
+    /* Prevent zoom on iOS */
+  }
+
+  /* Focus States for Accessibility */
+  .focus-academic {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent;
+  }
+
+  /* Grid System - Mobile First */
+  .grid-academic {
+    @apply grid grid-cols-1 gap-4;
+    @apply sm:grid-cols-2 sm:gap-6;
+    @apply lg:grid-cols-3 lg:gap-8;
+    @apply xl:grid-cols-4;
+  }
+
+  .grid-academic-2 {
+    @apply grid grid-cols-1 gap-4;
+    @apply md:grid-cols-2 md:gap-6 lg:gap-8;
+  }
+
+  /* Visual Hierarchy Indicators */
+  .hierarchy-1 {
+    @apply text-foreground font-bold;
+  }
+
+  .hierarchy-2 {
+    @apply text-foreground font-semibold;
+  }
+
+  .hierarchy-3 {
+    @apply text-foreground font-medium;
+  }
+
+  .hierarchy-4 {
+    @apply text-muted-foreground font-medium;
+  }
+
+  .hierarchy-5 {
+    @apply text-muted-foreground;
+  }
+
+  /* Academic Animations - Subtle & Functional */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.4s ease-out forwards;
+  }
+
+  /* Responsive Utilities */
+  .hide-mobile {
+    @apply hidden md:block;
+  }
+
+  .show-mobile {
+    @apply block md:hidden;
+  }
+
+  /* Content Width Constraints */
+  .content-width {
+    @apply max-w-none;
+    @apply sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl;
+  }
+}
+
+/* Print Styles for Accessibility */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break {
+    page-break-before: always;
+  }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
