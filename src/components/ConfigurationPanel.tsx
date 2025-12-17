@@ -74,14 +74,14 @@ const ConfigurationPanel: React.FC<ConfigurationPanelProps> = ({ onConfigChange 
   };
 
   const renderDropdown = (
-    key: keyof ConfigState, 
-    label: string, 
-    options: any[], 
+    key: keyof ConfigState,
+    label: string,
+    options: any[],
     icon: React.ReactNode,
     isColorTheme = false
   ) => {
     const currentOption = options.find(opt => opt.value === config[key]);
-    
+
     return (
       <div className="group">
         <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
@@ -90,8 +90,8 @@ const ConfigurationPanel: React.FC<ConfigurationPanelProps> = ({ onConfigChange 
         </label>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="w-full justify-between h-10 bg-white/95 border border-gray-200/80 hover:border-bravio-200 hover:bg-cream/30 transition-all duration-300 shadow-sm hover:shadow-md text-sm font-medium hover:scale-[1.01] transform backdrop-blur-sm"
             >
               <div className="flex items-center gap-2.5">
@@ -154,7 +154,7 @@ const ConfigurationPanel: React.FC<ConfigurationPanelProps> = ({ onConfigChange 
     <div className="relative bg-gradient-to-br from-white/95 via-cream/20 to-gray-50/30 border border-gray-200/60 rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 mb-6 backdrop-blur-sm">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.02),transparent_70%)] rounded-2xl"></div>
-      
+
       {/* Header */}
       <div className="relative z-10 mb-5">
         <div className="flex items-center justify-between mb-2">
@@ -169,7 +169,7 @@ const ConfigurationPanel: React.FC<ConfigurationPanelProps> = ({ onConfigChange 
               Live Preview
             </Badge>
           </div>
-          
+
           {/* Components Counter */}
           <div className="flex items-center gap-2 bg-gradient-to-r from-white/80 to-cream/60 border border-gray-200/50 rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 group cursor-pointer backdrop-blur-sm">
             <div className="relative">
@@ -181,28 +181,28 @@ const ConfigurationPanel: React.FC<ConfigurationPanelProps> = ({ onConfigChange 
               </div>
             </div>
             <div className="text-right">
-              <div className="text-xs font-bold text-gray-700 leading-none">50+</div>
+              <div className="text-xs font-bold text-gray-700 leading-none">40+</div>
               <div className="text-[10px] text-gray-500 leading-none">Components</div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Configuration Grid */}
       <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        {renderDropdown('heroSection', 'Hero Section', configOptions.heroSection, 
+        {renderDropdown('heroSection', 'Hero Section', configOptions.heroSection,
           <Home className="h-4 w-4 text-bravio-600" />)}
-        
-        {renderDropdown('whatsappButton', 'WhatsApp Button', configOptions.whatsappButton, 
+
+        {renderDropdown('whatsappButton', 'WhatsApp Button', configOptions.whatsappButton,
           <MessageCircle className="h-4 w-4 text-green-600" />)}
-        
-        {renderDropdown('cardStyle', 'Card Style', configOptions.cardStyle, 
+
+        {renderDropdown('cardStyle', 'Card Style', configOptions.cardStyle,
           <CreditCard className="h-4 w-4 text-blue-600" />)}
-        
-        {renderDropdown('partners', 'Partners Section', configOptions.partners, 
+
+        {renderDropdown('partners', 'Partners Section', configOptions.partners,
           <Users className="h-4 w-4 text-purple-600" />)}
-        
-        {renderDropdown('colorTheme', 'Color Theme', colorThemes, 
+
+        {renderDropdown('colorTheme', 'Color Theme', colorThemes,
           <Palette className="h-4 w-4 text-rose-600" />, true)}
       </div>
 

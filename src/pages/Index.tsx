@@ -112,7 +112,7 @@ const Index = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 text-left">
                 <div className="flex items-center gap-4 p-3 rounded-lg bg-slate-50/50">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-slate-700 font-medium">50+ Components</span>
+                  <span className="text-slate-700 font-medium">40+ Components</span>
                 </div>
                 <div className="flex items-center gap-4 p-3 rounded-lg bg-slate-50/50">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -128,16 +128,21 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Enhanced CTA button with better spacing */}
+              {/* Enhanced CTA button with responsive fix only */}
               <Button
                 size="lg"
-                className="w-full bg-slate-900 hover:bg-slate-800 text-white px-8 py-7 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mb-6 hover:scale-[1.02]"
+                className="w-full bg-slate-900 hover:bg-slate-800 text-white
+    px-6 sm:px-8 py-6 sm:py-7 font-bold rounded-xl shadow-lg hover:shadow-xl
+    transition-all duration-300 mb-6 hover:scale-[1.02]
+    text-sm sm:text-base lg:text-xl
+    min-h-[60px] sm:min-h-[70px]"
                 onClick={() => window.open('https://www.theportfolio.pro', '_blank')}
               >
-                Get Home-East Template Now - $9
-                <ArrowRight className="w-6 h-6 ml-3" />
+                <span className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+                  <span className="text-center">Get Home-East Template Now - $9</span>
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+                </span>
               </Button>
-
               {/* Enhanced trust indicators */}
               <div className="flex items-center justify-center gap-8 text-sm text-slate-500 pt-6 border-t border-slate-100">
                 <div className="flex items-center gap-2">

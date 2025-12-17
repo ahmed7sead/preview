@@ -162,10 +162,13 @@ const PreviewTabs = () => {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!zoomedImage) return;
     if (e.key === 'ArrowLeft') {
-      nextZoomedImage(e as any);
-    } else if (e.key === 'ArrowRight') {
       prevZoomedImage(e as any);
-    } else if (e.key === 'Escape') {
+    } else if (e.key === 'ArrowRight') {
+      nextZoomedImage(e as any);
+    }
+
+
+    else if (e.key === 'Escape') {
       closeImageZoom();
     }
   };
@@ -405,15 +408,16 @@ const PreviewTabs = () => {
                 onClick={prevZoomedImage}
                 className="absolute left-2 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md text-gray-800 rounded-full p-3 sm:p-4 hover:bg-white transition-all duration-300 shadow-2xl hover:scale-110 border border-gray-200 z-10"
               >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
 
               <button
                 onClick={nextZoomedImage}
                 className="absolute right-2 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md text-gray-800 rounded-full p-3 sm:p-4 hover:bg-white transition-all duration-300 shadow-2xl hover:scale-110 border border-gray-200 z-10"
               >
-                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
+
             </div>
 
             {/* Thumbnail strip at bottom */}

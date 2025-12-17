@@ -59,7 +59,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-20 lg:mb-24 fade-in-up -mt-4" style={{ animationDelay: '0.2s' }}>
             <Button asChild size="lg" className="group relative bg-gradient-to-r from-[#caa93c] to-[#b8952e] hover:from-[#b8952e] hover:to-[#a68529] text-white border-0 px-14 py-7 text-lg font-bold shadow-2xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 rounded-2xl overflow-hidden">
               <a
-                href="https://hebat-east-web-app.vercel.app/"
+                href="https://flex-fast-multi-purpose.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 relative z-10"
@@ -73,7 +73,7 @@ const HeroSection = () => {
             </Button>
             <Button asChild variant="outline" size="lg" className="group relative border-3 border-slate-800 hover:border-[#caa93c] hover:bg-slate-900 hover:text-white text-slate-900 px-14 py-7 text-lg font-bold bg-white/95 backdrop-blur-sm shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 rounded-2xl overflow-hidden">
               <a
-                href="#documentation"
+                href="https://previewtemp.vercel.app/documentation"
                 className="flex items-center gap-4 relative z-10"
               >
                 {/* Subtle inner glow on hover */}
@@ -128,11 +128,11 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
               <div className="flex items-center gap-4 bg-white/90 backdrop-blur-sm px-8 py-4 rounded-2xl border border-slate-200/50 shadow-md hover:shadow-lg hover:border-[#caa93c]/30 transition-all duration-300 hover:-translate-y-1">
                 <Layers className="h-6 w-6" style={{ color: '#caa93c' }} />
-                <span className="text-base font-bold" style={{ color: '#caa93c' }}>100+ Components</span>
+                <span className="text-base font-bold" style={{ color: '#caa93c' }}>40+ Components</span>
               </div>
               <div className="flex items-center gap-4 bg-white/90 backdrop-blur-sm px-8 py-4 rounded-2xl border border-slate-200/50 shadow-md hover:shadow-lg hover:border-[#caa93c]/30 transition-all duration-300 hover:-translate-y-1">
                 <FileStack className="h-6 w-6" style={{ color: '#caa93c' }} />
-                <span className="text-base font-bold" style={{ color: '#caa93c' }}>30+ Unique Pages</span>
+                <span className="text-base font-bold" style={{ color: '#caa93c' }}>15+ Unique Pages</span>
               </div>
             </div>
           </div>

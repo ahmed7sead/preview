@@ -142,7 +142,7 @@ const Header = () => {
               className="ml-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold shadow-sm hover:shadow-md transition-all duration-200"
             >
               <a
-                href="https://hebat-east-web-app.vercel.app/"
+                href="https://flex-fast-multi-purpose.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
@@ -234,7 +234,7 @@ const Header = () => {
                 className="bg-slate-900 hover:bg-slate-800 text-white font-semibold mt-2 w-fit"
               >
                 <a
-                  href="https://hebat-east-web-app.vercel.app/"
+                  href="https://flex-fast-multi-purpose.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

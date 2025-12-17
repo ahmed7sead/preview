@@ -10,7 +10,7 @@ interface ComponentsSectionProps {
 const ComponentsSection = ({ config, onConfigChange }: ComponentsSectionProps) => {
   // Generate dynamic URL based on configuration
   const previewUrl = useMemo(() => {
-    const baseUrl = "https://hebat-east-web-app.vercel.app/";
+    const baseUrl = "https://flex-fast-multi-purpose.vercel.app/";
     const params = new URLSearchParams();
 
     Object.entries(config).forEach(([key, value]) => {
